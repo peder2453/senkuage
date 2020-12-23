@@ -1,9 +1,11 @@
 <template>
   <div class="footer">
     <h1>Are you ready?</h1>
-    <h3>It's easy to open your encryption service.</h3>
-    <h3>You need to click the button to go to the next pag</h3>
-    <b>next page</b>
+    <div>
+      <h3>It's easy to open your encryption service.</h3>
+      <h3>You need to click the button to go to the next pag</h3>
+    </div>
+    <b>NEXT PAGE</b>
     <em />
     <img src="@/assets/footer_logo.png" />
   </div>
@@ -16,15 +18,18 @@ export default {
 </script>
 <style lang="scss" scoped>
 .footer {
-  border: 1px solid blue;
-  height: 700px;
+  height: 13rem;
   background: url("~@/assets/footer_back.png") no-repeat center/cover;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0 0.5rem;
+
   h1 {
     font-size: 1.5rem;
     text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
   }
   h3 {
     color: #92e7ff;
@@ -34,29 +39,25 @@ export default {
     font-weight: 400;
   }
   b {
-    display: block;
-    width: 3.5rem;
-    height: 1rem;
-    line-height: 1rem;
+    width: 4.5rem;
+    height: 1.3rem;
     background: #00eaed;
     font-size: 0.5rem;
-    text-align: center;
     border-radius: 1rem;
     font-weight: 400;
-    margin: 0 auto;
-    margin-top: 1rem;
+    min-width: 80px;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   em {
     width: 90%;
     height: 2px;
     background: rgba(255, 255, 255, 0.3);
-    display: block;
-    margin: 1rem auto;
   }
   img {
-    display: block;
-    margin: 0 auto;
-    width: 4rem;
+    width: 5rem;
   }
 }
 </style>

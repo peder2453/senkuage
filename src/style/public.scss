@@ -2,9 +2,12 @@
   padding: 0;
   margin: 0;
 }
+li{
+  list-style: none;
+}
 
 #app {
-  min-height: 100vh;
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
 }
