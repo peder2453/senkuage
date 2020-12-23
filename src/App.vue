@@ -18,5 +18,6 @@ export default {
 .content-main{
   min-height:100px;
   border:1px solid red;
+  flex: 1;
 }
 </style>
