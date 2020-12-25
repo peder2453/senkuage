@@ -20,6 +20,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   position: absolute;
+  z-index: 1;
   top: 0.8rem;
   left: 50%;
   transform: translateX(-50%);
@@ -52,7 +53,7 @@ export default {
     padding: 0 0.25rem;
     border-radius: 0.2rem;
     color: #fff;
-    background: linear-gradient(to right, #22bffe, #00f4ee);
+    // background: linear-gradient(to right, #22bffe, #00f4ee);
   }
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <Head-Main />
-  <router-view class="content-main" />
+  <div class="content-main">
+    <router-view />
+  </div>
   <Footer-Main />
 </template>
 <script>
@@ -16,7 +18,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .content-main {
-  padding-top: 2rem;
   min-height: 100px;
   flex: 1;
 }
