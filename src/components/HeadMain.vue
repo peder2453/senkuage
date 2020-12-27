@@ -2,18 +2,25 @@
   <div class="header">
     <img src="@/assets/footer_logo.png" alt="" class="logo" />
     <ul>
-      <li>Home</li>
-      <li>About us</li>
+      <li :class="{sel:path==='/'}" @click="$router.push('/')">Home</li>
+      <li :class="{sel:path==='/about'}" @click="$router.push('/about')">About us</li>
       <li>Agreement</li>
-      <li class="sel">Administrati</li>
+      <li>Administrati</li>
     </ul>
     <b>More</b>
   </div>
 </template>
 
 <script>
+import { computed } from "vue";
+import { useRoute } from "vue-router";
 export default {
   name: "Head",
+  setup() {
+    const router = useRoute();
+    const path = computed(() => router.path);
+    return { path };
+  },
 };
 </script>
 
@@ -43,8 +50,8 @@ export default {
       cursor: pointer;
       &.sel {
         background: #fff;
-        color: #5058fb;
-        box-shadow: 0 .1rem 1rem 0 #0066C2;
+        color: #00acfb;
+        box-shadow: 0 0.1rem 1rem 0 #0066c2;
       }
     }
   }

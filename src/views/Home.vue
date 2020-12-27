@@ -7,12 +7,37 @@
     </div>
   </div>
   <div class="home-content">
+    <img src="@/assets/home/back0.png" alt="" class="back back0">
+    <img src="@/assets/home/back1.png" alt="" class="back back1">
+    <img src="@/assets/home/back2.png" alt="" class="back back2">
     <div class="home-publicity">
       <img src="@/assets/home/login-token.png" alt="" />
-      <h3>COMPLETELY VALUELESS</h3>
+      <h4>COMPLETELY VALUELESS</h4>
       <h6>
         Senkuage tokens are valueless and serve as governance tokens for
         Senkuage protocol
+      </h6>
+    </div>
+    <div class="home-publicity">
+      <img src="@/assets/home/scoop.png" alt="" />
+      <h4>SHIELD MINING</h4>
+      <h6>
+        Earn Senkuage tokens through using the Senkuage Protoco
+      </h6>
+    </div>
+    <div class="home-publicity">
+      <img src="@/assets/home/govern.png" alt="" />
+      <h4>GOVERNANCE</h4>
+      <h6>
+        Vote on community-submitted proposals that will shape the future of the
+        protocol
+      </h6>
+    </div>
+    <div class="home-publicity">
+      <img src="@/assets/home/claim.png" alt="" />
+      <h4>CLAIMS MANAGEMENT</h4>
+      <h6>
+        Play a vital role in the claims management process by validating/invalidating claims
       </h6>
     </div>
   </div>
@@ -45,15 +70,34 @@ export default {
   }
 }
 .home-content {
+  position: relative;
+  img.back{
+    position:absolute;
+    &.back0{
+      right:0;
+      height:15rem;
+    }
+    &.back1{
+      top:50%;
+      left:0;
+      height:10rem;
+    }
+    &.back2{
+      top:85%;
+      right:0;
+      height:4rem;
+    }
+  }
   .home-publicity {
-    border: 1px solid red;
+    position: relative;
     width: 15rem;
-    margin: 1rem auto;
+    margin: 4rem auto;
     text-align: center;
     img {
       width: 2.5rem;
+      margin-bottom:.5rem;
     }
-    h3 {
+    h4 {
       margin-top: 0.5rem;
       color: #333333;
     }
