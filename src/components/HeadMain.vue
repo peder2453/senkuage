@@ -4,7 +4,7 @@
     <ul>
       <li :class="{sel:path==='/'}" @click="$router.push('/')">Home</li>
       <li :class="{sel:path==='/about'}" @click="$router.push('/about')">About us</li>
-      <li>Agreement</li>
+      <li :class="{sel:path==='/agreement'}" @click="$router.push('/agreement')">Agreement</li>
       <li>Administrati</li>
     </ul>
     <b>More</b>
