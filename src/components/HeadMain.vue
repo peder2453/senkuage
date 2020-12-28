@@ -1,25 +1,63 @@
 <template>
   <div class="header">
     <img src="@/assets/footer_logo.png" alt="" class="logo" />
-    <ul>
-      <li :class="{sel:path==='/'}" @click="$router.push('/')">Home</li>
-      <li :class="{sel:path==='/about'}" @click="$router.push('/about')">About us</li>
-      <li :class="{sel:path==='/agreement'}" @click="$router.push('/agreement')">Agreement</li>
-      <li :class="{sel:path==='/administrati'}" @click="$router.push('/administrati')">Administrati</li>
+    <ul class="pc">
+      <li :class="{ sel: path === '/' }" @click="$router.push('/')">Home</li>
+      <li :class="{ sel: path === '/about' }" @click="$router.push('/about')">
+        About us
+      </li>
+      <li
+        :class="{ sel: path === '/agreement' }"
+        @click="$router.push('/agreement')"
+      >
+        Agreement
+      </li>
+      <li
+        :class="{ sel: path === '/administrati' }"
+        @click="$router.push('/administrati')"
+      >
+        Administrati
+      </li>
     </ul>
     <b>More</b>
+
+    <img
+      src="@/assets/footer_menu.png"
+      @click="isShowMenu = true"
+      class="menu"
+    />
+  </div>
+  <div class="menu-list" :class="{ close: !isShowMenu }">
+    <div class="zzc" @click="isShowMenu = false"></div>
+    <ul>
+      <img
+        src="@/assets/footer_close.png"
+        @click="isShowMenu = false"
+        class="close"
+      />
+      <li @click="goto('/')">Home</li>
+      <li @click="goto('/about')">About us</li>
+      <li @click="goto('/agreement')">Agreement</li>
+      <li @click="goto('/administrati')">Administrati</li>
+    </ul>
   </div>
 </template>
 
 <script>
-import { computed } from "vue";
-import { useRoute } from "vue-router";
+import { computed, ref } from "vue";
+import { useRoute, useRouter } from "vue-router";
 export default {
   name: "Head",
   setup() {
-    const router = useRoute();
-    const path = computed(() => router.path);
-    return { path };
+    const route = useRoute();
+    const router = useRouter();
+    const path = computed(() => route.path);
+    const isShowMenu = ref(false);
+    function goto(path) {
+      router.push(path);
+      isShowMenu.value = false;
+    }
+    return { path, isShowMenu, goto };
   },
 };
 </script>
@@ -39,15 +77,17 @@ export default {
   .logo {
     width: 6rem;
   }
-  ul {
+  ul.pc {
     font-size: 0.5rem;
     display: flex;
+    display: flex;
     justify-content: space-evenly;
-    flex: 1;
+    margin-right: 3rem;
     li {
       padding: 0.1rem 0.25rem;
       border-radius: 0.2rem;
       cursor: pointer;
+      margin: 0 0.5rem;
       &.sel {
         background: #fff;
         color: #00acfb;
@@ -57,10 +97,76 @@ export default {
   }
   b {
     font-size: 0.6rem;
-    padding: 0 0.25rem;
+    padding: 0.1rem 0.4rem;
     border-radius: 0.2rem;
     color: #fff;
-    // background: linear-gradient(to right, #22bffe, #00f4ee);
+
+    background: linear-gradient(to right, #22bffe, #00f4ee);
+    // box-shadow: 0px 0px 17px 1px rgba(1, 115, 216, 0.32);
+    border-radius: 7px;
+  }
+  .menu {
+    width: 1.8rem;
+    display: none;
+  }
+}
+.menu-list {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  transition: all 0.2s;
+  .zzc {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+  ul {
+    transition: all 0.3s;
+    transform: translateX(0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background: #fff;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 4rem 3rem;
+    img.close {
+      width: 1.5rem;
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+    }
+    li {
+      font-size: 1.2rem;
+      padding: 1.5rem 0.6rem 0.2rem;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+.menu-list.close {
+  // left: 100%;
+  ul {
+    transform: translateX(100%);
+  }
+  opacity: 0;
+  pointer-events: none;
+}
+@media screen and (max-width: 540px) {
+  .header {
+    ul.pc,
+    b {
+      display: none;
+    }
+    .menu {
+      display: inline;
+    }
   }
 }
 </style>

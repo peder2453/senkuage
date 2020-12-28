@@ -8,9 +8,7 @@
         using ETH Smart Contracts, an ecosystem of DeFi products that will
         interoperate to bring optimal profits returns to users.
       </h6>
-      <div class="btn">
-        Senkuage token: $SKG.
-      </div>
+      <div class="btn">Senkuage token: $SKG.</div>
     </div>
   </div>
   <div class="fast">
@@ -18,30 +16,18 @@
     <div class="list">
       <li>
         <img src="@/assets/administrati/fast-icon0.png" alt="" />
-        <span>
-          allows DeFi users to
-        </span>
-        <b>
-          buy protection against smart contract risk
-        </b>
+        <span> allows DeFi users to </span>
+        <b> buy protection against smart contract risk </b>
       </li>
       <li>
         <img src="@/assets/administrati/fast-icon1.png" alt="" />
-        <span>
-          allows DeFi users to
-        </span>
-        <b>
-          Crypto Arbitrage
-        </b>
+        <span> allows DeFi users to </span>
+        <b> Crypto Arbitrage </b>
       </li>
       <li>
         <img src="@/assets/administrati/fast-icon2.png" alt="" />
-        <span>
-          allows DeFi users to
-        </span>
-        <b>
-          profit in different liquidity Pool
-        </b>
+        <span> allows DeFi users to </span>
+        <b> profit in different liquidity Pool </b>
       </li>
     </div>
   </div>
@@ -97,7 +83,7 @@ export default {
     justify-content: center;
     align-items: flex-start;
     li {
-      width: 450px;
+      width: 350px;
       margin-top: 1rem;
       margin-left: 1rem;
       display: flex;

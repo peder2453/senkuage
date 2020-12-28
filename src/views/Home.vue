@@ -7,9 +7,9 @@
     </div>
   </div>
   <div class="home-content">
-    <img src="@/assets/home/back0.png" alt="" class="back back0">
-    <img src="@/assets/home/back1.png" alt="" class="back back1">
-    <img src="@/assets/home/back2.png" alt="" class="back back2">
+    <img src="@/assets/home/back0.png" alt="" class="back back0" />
+    <img src="@/assets/home/back1.png" alt="" class="back back1" />
+    <img src="@/assets/home/back2.png" alt="" class="back back2" />
     <div class="home-publicity">
       <img src="@/assets/home/login-token.png" alt="" />
       <h4>COMPLETELY VALUELESS</h4>
@@ -21,9 +21,7 @@
     <div class="home-publicity">
       <img src="@/assets/home/scoop.png" alt="" />
       <h4>SHIELD MINING</h4>
-      <h6>
-        Earn Senkuage tokens through using the Senkuage Protoco
-      </h6>
+      <h6>Earn Senkuage tokens through using the Senkuage Protoco</h6>
     </div>
     <div class="home-publicity">
       <img src="@/assets/home/govern.png" alt="" />
@@ -37,7 +35,8 @@
       <img src="@/assets/home/claim.png" alt="" />
       <h4>CLAIMS MANAGEMENT</h4>
       <h6>
-        Play a vital role in the claims management process by validating/invalidating claims
+        Play a vital role in the claims management process by
+        validating/invalidating claims
       </h6>
     </div>
   </div>
@@ -71,21 +70,21 @@ export default {
 }
 .home-content {
   position: relative;
-  img.back{
-    position:absolute;
-    &.back0{
-      right:0;
-      height:15rem;
+  img.back {
+    position: absolute;
+    &.back0 {
+      right: 0;
+      height: 15rem;
     }
-    &.back1{
-      top:50%;
-      left:0;
-      height:10rem;
+    &.back1 {
+      top: 50%;
+      left: 0;
+      height: 10rem;
     }
-    &.back2{
-      top:85%;
-      right:0;
-      height:4rem;
+    &.back2 {
+      top: 85%;
+      right: 0;
+      height: 4rem;
     }
   }
   .home-publicity {
@@ -95,7 +94,7 @@ export default {
     text-align: center;
     img {
       width: 2.5rem;
-      margin-bottom:.5rem;
+      margin-bottom: 0.5rem;
     }
     h4 {
       margin-top: 0.5rem;
@@ -106,6 +105,14 @@ export default {
       color: #563afc;
       margin-top: 0.5rem;
       font-weight: 400;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .home-content {
+    .home-publicity {
+      width: 25rem;
     }
   }
 }

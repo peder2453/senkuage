@@ -5,15 +5,33 @@
       <h3>It's easy to open your encryption service.</h3>
       <h3>You need to click the button to go to the next pag</h3>
     </div>
-    <b>NEXT PAGE</b>
+    <b @click="$router.push(lastPath)">NEXT PAGE</b>
     <em />
     <img src="@/assets/footer_logo.png" />
   </div>
 </template>
 
 <script>
+import { computed, ref, watch } from "vue";
+import { useRoute } from "vue-router";
 export default {
   name: "Footer",
+  setup() {
+    const list = ["/", "/about", "/agreement", "/administrati"];
+    const route = useRoute();
+    const path = computed(() => route.path);
+    let lastPath = ref(list[1]);
+    watch(path, () => {
+      let index = list.findIndex((e) => e === path.value);
+      if (index >= list.length - 1) {
+        lastPath.value = list[0];
+      } else {
+        lastPath.value = list[index + 1];
+      }
+      window.scroll(0, 0);
+    });
+    return { lastPath };
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -50,6 +68,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
   em {
     width: 90%;
@@ -58,6 +77,13 @@ export default {
   }
   img {
     width: 5rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .footer {
+    b {
+      padding: 0.1rem 0.3rem;
+    }
   }
 }
 </style>
