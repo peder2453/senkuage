@@ -254,7 +254,7 @@ export default {
     .li-left {
       width: 500px;
       padding-top: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       .li-tit {
         color: #2c79f0;
         font-size: 1.2rem;
@@ -271,6 +271,47 @@ export default {
     .right-img {
       width: 13rem;
       margin: 0 2rem;
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .home-banner {
+    .wz {
+      h1 {
+        font-size: 1.5rem;
+      }
+      h6 {
+        margin-top: 0.5rem;
+      }
+      .btn {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  .trade {
+    .conent {
+      width: 54%;
+      padding-right: 1%;
+      .tit {
+        margin-bottom: 0.1rem;
+      }
+      .cont {
+        font-size: 0.5rem;
+      }
+    }
+  }
+  .defi {
+    .cont {
+      .right-cont {
+        width: 80%;
+      }
+    }
+  }
+  .works {
+    li {
+      .li-left {
+        width: 20rem;
+      }
     }
   }
 }

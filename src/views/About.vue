@@ -26,7 +26,7 @@
           canearn the "spread" Instantly
         </div>
       </li>
-      <li class="sel">
+      <li>
         <img src="@/assets/about/cont-icon1.png" alt="" />
         <div class="txt">
           · Can transfer between exchanges but taht takes time <br />
@@ -79,24 +79,18 @@
       Can also do this for crypto, even within 1 exchange!
     </div>
     <img class="down-w" src="@/assets/about/down-w.png" alt="" />
-    <div class="crypot-content">
-      <div class="cry-card">
-        <div class="cay-tit">
-          Mispricing between 3 pairs of coins
-        </div>
-        <i></i>
-        <div class="cay-con">
-          E.g. ETH/BTC, ETH/LTC,and LTC/BTC
-        </div>
-      </div>
-      <div class="cry-card">
-        <div class="cay-tit">
-          There are different ratios between coins
-        </div>
-        <i></i>
-        <div class="cay-con">
-          This is when Senkuage Arbitrage BOTS can do Triangular arbitrage
-        </div>
+  </div>
+  <div class="crypot-content">
+    <div class="cry-card">
+      <div class="cay-tit">Mispricing between 3 pairs of coins</div>
+      <i></i>
+      <div class="cay-con">E.g. ETH/BTC, ETH/LTC,and LTC/BTC</div>
+    </div>
+    <div class="cry-card">
+      <div class="cay-tit">There are different ratios between coins</div>
+      <i></i>
+      <div class="cay-con">
+        This is when Senkuage Arbitrage BOTS can do Triangular arbitrage
       </div>
     </div>
   </div>
@@ -125,9 +119,7 @@
   </div>
   <div class="simple">
     <div class="title">Cash-and-Carry arbitrage</div>
-    <div class="coinbase">
-      do this in futures markets
-    </div>
+    <div class="coinbase">do this in futures markets</div>
     <img class="down" src="@/assets/about/down.png" alt="" />
     <div class="sim-content cash">
       <div class="cash-li">
@@ -216,7 +208,8 @@ export default {
       padding: 20px;
       box-sizing: border-box;
       cursor: pointer;
-      &.sel {
+      transition: all 0.3s;
+      &:hover {
         box-shadow: 0 5px 15px 0px rgba(0, 153, 246, 0.3);
       }
       & > img {
@@ -251,7 +244,7 @@ export default {
     }
   }
   & > img {
-    height: 300px;
+    height: 10rem;
   }
 }
 .crypto {
@@ -264,7 +257,6 @@ export default {
   align-items: center;
   position: relative;
   height: 10rem;
-  margin-bottom: 5rem;
   .titlt {
     color: #fff;
     font-size: 1rem;
@@ -280,41 +272,38 @@ export default {
     margin-top: 0.6rem;
     width: 0.6rem;
   }
-  .crypot-content {
-    position: absolute;
-    bottom: 0;
-    transform: translateY(55%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    .cry-card {
-      border: 1px solid #fff;
-      width: 10rem;
-      height: 7rem;
-      padding: 1rem;
-      border-radius: 10px;
-      background: #fff;
-      box-shadow: 0 0 10px 1px rgba($color: #000000, $alpha: 0.2);
-      .cay-tit {
-        font-size: 0.9rem;
-        font-weight: bold;
-      }
-      &.cry-card:last-child {
-        margin-left: 1rem;
-      }
-      & > i {
-        display: block;
-        width: 1rem;
-        height: 2px;
-        background: #00a0e9;
-        margin-top: 1rem;
-      }
-      .cay-con {
-        color: #666666;
-        font-size: 0.5rem;
-        margin-top: 1rem;
-      }
+}
+.crypot-content {
+  transform: translateY(-4rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -4rem;
+  .cry-card {
+    border: 1px solid #fff;
+    width: 300px;
+    height: 7rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px 1px rgba($color: #000000, $alpha: 0.2);
+    margin: 1rem;
+    .cay-tit {
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    & > i {
+      display: block;
+      width: 1rem;
+      height: 2px;
+      background: #00a0e9;
+      margin-top: 1rem;
+    }
+    .cay-con {
+      color: #666666;
+      font-size: 0.5rem;
+      margin-top: 1rem;
     }
   }
 }
@@ -340,14 +329,13 @@ export default {
   }
 }
 .simple .cash {
-  width: 80%;
+  width: 90%;
   justify-content: center;
   margin-bottom: 3rem;
   margin-top: 2rem;
   .cash-li {
-    margin-right: 1rem;
-    margin-top: 1rem;
-    width: 350px;
+    margin: 1rem;
+    width: 300px;
     & > img {
       width: 2rem;
     }
@@ -355,6 +343,33 @@ export default {
       display: block;
       font-size: 0.6rem;
       margin-top: 0.5rem;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .simple {
+    .sim-content {
+      li {
+        width: 20rem;
+        & > img {
+          width: 3rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    .sim-content.fiat {
+      .left-block {
+        width: 30rem;
+        .li {
+          & > img {
+            width: 5rem;
+            margin-right: 1rem;
+          }
+        }
+      }
+      & > img {
+        height: 20rem;
+      }
     }
   }
 }
