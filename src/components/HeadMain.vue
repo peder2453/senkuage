@@ -2,21 +2,13 @@
   <div class="header">
     <img src="@/assets/footer_logo.png" alt="" class="logo" />
     <ul class="pc">
-      <li :class="{ sel: path === '/' }" @click="$router.push('/')">Home</li>
-      <li :class="{ sel: path === '/about' }" @click="$router.push('/about')">
-        About us
-      </li>
       <li
-        :class="{ sel: path === '/agreement' }"
-        @click="$router.push('/agreement')"
+        v-for="({ path, name }, i) in menuList"
+        :key="i"
+        :class="{ sel: indexpath ===  path}"
+        @click="goto(path)"
       >
-        Agreement
-      </li>
-      <li
-        :class="{ sel: path === '/administrati' }"
-        @click="$router.push('/administrati')"
-      >
-        Administrati
+        {{ name }}
       </li>
     </ul>
     <b>More</b>
@@ -35,10 +27,9 @@
         @click="isShowMenu = false"
         class="close"
       />
-      <li @click="goto('/')">Home</li>
-      <li @click="goto('/about')">About us</li>
-      <li @click="goto('/agreement')">Agreement</li>
-      <li @click="goto('/administrati')">Administrati</li>
+      <li v-for="({ path, name }, i) in menuList" :key="i" @click="goto(path)">
+        {{ name }}
+      </li>
     </ul>
   </div>
 </template>
@@ -51,13 +42,31 @@ export default {
   setup() {
     const route = useRoute();
     const router = useRouter();
-    const path = computed(() => route.path);
+    const indexpath = computed(() => route.path);
     const isShowMenu = ref(false);
+    const menuList = [
+      {
+        name: "Administrati",
+        path: "/",
+      },
+      {
+        name: "Agreement",
+        path: "/agreement",
+      },
+      {
+        name: "About us",
+        path: "/about",
+      },
+      {
+        name: "Home",
+        path: "/home",
+      },
+    ];
     function goto(path) {
       router.push(path);
       isShowMenu.value = false;
     }
-    return { path, isShowMenu, goto };
+    return { indexpath, isShowMenu, goto, menuList };
   },
 };
 </script>

@@ -17,7 +17,7 @@ import { useRoute } from "vue-router";
 export default {
   name: "Footer",
   setup() {
-    const list = ["/", "/about", "/agreement", "/administrati"];
+    const list = ["/", "/agreement", "/about", "/home"];
     const route = useRoute();
     const path = computed(() => route.path);
     let lastPath = ref(list[1]);
