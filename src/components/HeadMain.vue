@@ -5,7 +5,7 @@
       <li
         v-for="({ path, name }, i) in menuList"
         :key="i"
-        :class="{ sel: indexpath ===  path}"
+        :class="{ sel: indexpath === path }"
         @click="goto(path)"
       >
         {{ name }}
@@ -142,19 +142,22 @@ export default {
     top: 0;
     right: 0;
     z-index: 2;
-    background: #fff;
+    background: #426a9f;
     height: 100vh;
     box-sizing: border-box;
-    padding: 4rem 3rem;
+    padding: 8rem 3rem;
     img.close {
       width: 1.5rem;
       position: absolute;
-      right: 2rem;
-      top: 2rem;
+      left: 3rem;
+      top: 3.5rem;
     }
     li {
+      font-weight: bold;
+      color: #fff;
+      width: 12rem;
       font-size: 1.2rem;
-      padding: 1.5rem 0.6rem 0.2rem;
+      padding: 1.5rem 0 .8rem;
       border-bottom: 1px solid #ccc;
     }
   }

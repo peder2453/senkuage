@@ -276,7 +276,21 @@ export default {
 }
 @media screen and (max-width: 560px) {
   .home-banner {
+    margin-bottom: 25rem;
+    height: 40rem;
+    position: relative;
+    img {
+      width: auto;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
     .wz {
+      margin-top: 38rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #333;
       h1 {
         font-size: 1.5rem;
       }
@@ -284,14 +298,26 @@ export default {
         margin-top: 0.5rem;
       }
       .btn {
-        margin-top: 0.5rem;
+        color: #333;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   }
   .trade {
+    border: 1px solid red;
+    height: 25rem;
+    background-position: left;
+    margin-bottom: 20rem;
     .conent {
       width: 54%;
       padding-right: 1%;
+      margin-top: 22rem;
+      color: #333;
+      right:auto;
+      left:50%;
+      transform: translateX(-50%);
       .tit {
         margin-bottom: 0.1rem;
       }
