@@ -89,7 +89,7 @@ export default {
     const i18n = useI18n();
     const setLocale = (lang) => {
       i18n.setLocale(lang);
-      // isShowMenu.value = false;
+      isShowMenu.value = false;
     };
 
     // setInterval(() => {
