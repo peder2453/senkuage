@@ -2,8 +2,8 @@
   <div class="home-banner">
     <img src="@/assets/home_back.png" alt="" />
     <div class="wz">
-      <h1>Senkuage TOKEN</h1>
-      <h5>What is Senkuage Token and what is it used for?</h5>
+      <h1>{{$t('home.senkuage')}}</h1>
+      <h5>{{$t('home.whatIs')}}</h5>
     </div>
   </div>
   <div class="home-content">
@@ -12,31 +12,28 @@
     <img src="@/assets/home/back2.png" alt="" class="back back2" />
     <div class="home-publicity">
       <img src="@/assets/home/login-token.png" alt="" />
-      <h4>COMPLETELY VALUELESS</h4>
+      <h4>{{$t('home.comp')}}</h4>
       <h6>
-        Senkuage tokens are valueless and serve as governance tokens for
-        Senkuage protocol
+        {{$t('home.protocol')}}
       </h6>
     </div>
     <div class="home-publicity">
       <img src="@/assets/home/scoop.png" alt="" />
-      <h4>SHIELD MINING</h4>
-      <h6>Earn Senkuage tokens through using the Senkuage Protoco</h6>
+      <h4>{{$t('home.shield')}}</h4>
+      <h6>{{$t('home.earn')}}</h6>
     </div>
     <div class="home-publicity">
       <img src="@/assets/home/govern.png" alt="" />
-      <h4>GOVERNANCE</h4>
+      <h4>{{$t('home.gove')}}</h4>
       <h6>
-        Vote on community-submitted proposals that will shape the future of the
-        protocol
+        {{$t('home.proposals')}}
       </h6>
     </div>
     <div class="home-publicity">
       <img src="@/assets/home/claim.png" alt="" />
-      <h4>CLAIMS MANAGEMENT</h4>
+      <h4>{{$t('home.claims')}}</h4>
       <h6>
-        Play a vital role in the claims management process by
-        validating/invalidating claims
+        {{$t('home.management')}}
       </h6>
     </div>
   </div>

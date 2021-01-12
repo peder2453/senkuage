@@ -1,9 +1,9 @@
 <template>
   <div class="footer">
-    <h1>Are you ready?</h1>
+    <h1>{{$t('footer.areYou')}}</h1>
     <div>
-      <h3>It's easy to open your encryption service.</h3>
-      <h3>You need to click the button to go to the next pag</h3>
+      <h3>{{$t('footer.easy')}}</h3>
+      <h3>{{$t('footer.need')}}</h3>
     </div>
     <b @click="$router.push(lastPath)">NEXT PAGE</b>
     <em />

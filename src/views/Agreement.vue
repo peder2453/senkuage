@@ -3,73 +3,64 @@
     <img src="@/assets/home_back.png" alt="" />
     <div class="wz">
       <h1>
-        Senkuage PROTOCOL
+        {{$t('agreement.senkuage')}}
       </h1>
       <h5>
-        What is Senkuage Protocol and what makes it unique?
+        {{$t('agreement.whatIs')}}
       </h5>
     </div>
   </div>
 
   <div class="market">
     <div class="market-left">
-      <div class="titlt">MARKET EFFICIENT</div>
+      <div class="titlt">{{$t('agreement.market')}}</div>
       <div class="contetn">
-        When there is a demand for coverage, Senkuage protocol incentivizes
-        market makers to fill the need of the demand. At the same time, it lets
-        the market set the premium of the coverage.
+        {{$t('agreement.whenThere')}}
       </div>
     </div>
     <img src="@/assets/agreement/market-img0.png" alt="" class="market-right" />
   </div>
   <div class="market right">
     <div class="market-left">
-      <div class="titlt">SCALABLE</div>
+      <div class="titlt">{{$t('agreement.scall')}}</div>
       <div class="contetn">
-        Senkuage Protocol separates itself from other coverage protocols due to
-        independent coverage ceilings as opposed to pooled staking.
+        {{$t('agreement.senkuageProtocol')}}
       </div>
     </div>
     <img src="@/assets/agreement/market-img1.png" alt="" class="market-right" />
   </div>
   <div class="market">
     <div class="market-left">
-      <div class="titlt">FUNGIBLE COVERAGE</div>
+      <div class="titlt">{{$t('agreement.fungible')}}</div>
       <div class="contetn">
-        Obtain ERC-20 coverage for the time period you need. Trade your coverage
-        on Balancer and Uniswap at anytime.
+        {{$t('agreement.obtain')}}
       </div>
     </div>
     <img src="@/assets/agreement/market-img2.png" alt="" class="market-right" />
   </div>
   <div class="market right">
     <div class="market-left">
-      <div class="titlt">DECENTRALIZED</div>
+      <div class="titlt">{{$t('agreement.dece')}}</div>
       <div class="contetn">
-        Senkuage Protocol's smart contracts will be audited, deployed, and
-        verified on the Ethereum blockchain, making coverage entirely censorship
-        resistant and open.
+        {{$t('agreement.senkuagep')}}
       </div>
     </div>
     <img src="@/assets/agreement/market-img3.png" alt="" class="market-right" />
   </div>
   <div class="market">
     <div class="market-left">
-      <div class="titlt">LIMITLESS</div>
+      <div class="titlt">{{$t('agreement.lim')}}</div>
       <div class="contetn">
-        Senkuage Protocol will allow you to buy cover on anything, beyond just
-        smart contracts and crypto. Those looking to purchase coverage are able
-        to, as long as there are people willing to provide coverage.
+        {{$t('agreement.will')}}
       </div>
     </div>
     <img src="@/assets/agreement/market-img4.png" alt="" class="market-right" />
   </div>
   <div class="market right">
     <div class="market-left">
-      <div class="titlt">NO KYC REQUIRED</div>
+      <div class="titlt">{{$t('agreement.nokyc')}}</div>
       <div class="contetn">
-        Senkuage Protocol allows you to buy coverage without needing to give up
-        your identity.
+        {{$t('agreement.identity')}}
       </div>
     </div>
     <img src="@/assets/agreement/market-img5.png" alt="" class="market-right" />

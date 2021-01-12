@@ -2,98 +2,93 @@
   <div class="home-banner">
     <img src="@/assets/administrati/back.png" alt="" />
     <div class="wz">
-      <h1>Exchange DeFi arbitrage</h1>
+      <h1>{{ $t("Administrati.exchange") }}</h1>
       <h6>
-        Senkuage Protocol which is on Ethereum,is direct Exchange DeFi arbitrage
-        using ETH Smart Contracts, an ecosystem of DeFi products that will
-        interoperate to bring optimal profits returns to users.
+        {{ $t("Administrati.protocol") }}
       </h6>
-      <div class="btn">Senkuage token: $SKG.</div>
+      <div class="btn">{{ $t("Administrati.senkuageToken") }}</div>
     </div>
   </div>
   <div class="fast">
-    <div class="title">Fast Exchange Transfer Arbitrage</div>
+    <div class="title">{{ $t("Administrati.fastExchange") }}</div>
     <div class="list">
       <li>
         <img src="@/assets/administrati/fast-icon0.png" alt="" />
-        <span> allows DeFi users to </span>
-        <b> buy protection against smart contract risk </b>
+        <span> {{$t('Administrati.allowsDeFi')}} </span>
+        <b> {{$t('Administrati.buyProtection')}} </b>
       </li>
       <li>
         <img src="@/assets/administrati/fast-icon1.png" alt="" />
-        <span> allows DeFi users to </span>
-        <b> Crypto Arbitrage </b>
+        <span> {{$t('Administrati.allowsDeFi')}} </span>
+        <b> {{$t('Administrati.cryptoArbitrage')}} </b>
       </li>
       <li>
         <img src="@/assets/administrati/fast-icon2.png" alt="" />
-        <span> allows DeFi users to </span>
-        <b> profit in different liquidity Pool </b>
+        <span> {{$t('Administrati.allowsDeFi')}} </span>
+        <b> {{$t('Administrati.profitIn')}} </b>
       </li>
     </div>
   </div>
 
   <div class="trade">
     <div class="conent">
-      <div class="tit">TRADE WITH EDGE</div>
+      <div class="tit">{{$t('Administrati.trand')}}</div>
       <div class="cont">
-        Market Signals and Analytics Crypto arbitrage with orderbook depth
-        check. Explosive movers in Crypto.Company under/over valuation.
-        Automated options chain pricing evaluation and more...
+        {{$t('Administrati.marketSignals')}}
       </div>
     </div>
   </div>
 
   <div class="defi">
-    <div class="tit">Senkuage Defi Platform Works</div>
+    <div class="tit">{{$t('Administrati.senkuageDefi')}}</div>
     <div class="cont">
       <img src="@/assets/administrati/defiimg.png" alt="" class="leftimg" />
       <div class="right-cont">
-        <div class="tit">Senkuage Arbitrage Bots Profits</div>
+        <div class="tit">{{$t('Administrati.senkuageTit')}}</div>
         <div class="r-cont">
-          Senkuage Arbitrage Bots <br />
-          Senkuage Arbitrage Bots is a savvy arbitrage hunters that know various
-          ways to capitalise on opportunities. <br />
-          1 Simple arbitrageurs <br />
-          2 Fiat traiangular arbitrage <br />
-          3 Crypto Triangular arbitrage <br />
-          4 Convergence arbitrage <br />
-          5 Cash-and-Carry arbitrage
+          {{$t('Administrati.senkuageArbitrage')}} <br />
+          {{$t('Administrati.senkuageArbitrageBots')}} <br />
+          {{$t('Administrati.simple')}} <br />
+          {{$t('Administrati.fiat')}} <br />
+          {{$t('Administrati.crypto')}} <br />
+          {{$t('Administrati.convergence')}} <br />
+          {{$t('Administrati.cash')}}
         </div>
       </div>
     </div>
   </div>
 
   <div class="works">
-    <div class="tit">Senkuage Defi Platform Works</div>
+    <div class="tit">{{$t('Administrati.senkuageDefi')}}</div>
     <li>
       <div class="li-left">
-        <div class="li-tit">DEPOSIT ASSET</div>
+        <div class="li-tit">{{$t('Administrati.deposit')}}</div>
         <div class="cont">
-          Investors can deposit selected supported <br />
-          currencies at anytime and anywhere <br />
-          Collateral remains on-chain for <br />
-          the duration of trading
+          {{$t('Administrati.investors')}} <br />
+          {{$t('Administrati.currencies')}} <br />
+          {{$t('Administrati.collateral')}} <br />
+          {{$t('Administrati.theDuration')}}
         </div>
       </div>
       <img src="@/assets/administrati/works0.png" alt="" class="right-img" />
     </li>
     <li class="reve">
       <div class="li-left">
-        <div class="li-tit">PICK YOUR</div>
+        <div class="li-tit">{{$t('Administrati.pick')}}</div>
         <div class="cont">
-          Easy to choose available Defi packages <br />
-          to profitAll asset transaction is <br />
-          on-chain, safe and secure
+          {{$t('Administrati.easy')}} <br />
+          {{$t('Administrati.toProfitAll')}} <br />
+          {{$t('Administrati.chain')}}
         </div>
       </div>
       <img src="@/assets/administrati/works1.png" alt="" class="right-img" />
     </li>
     <li>
       <div class="li-left">
-        <div class="li-tit">PROFIT AND EXIT</div>
+        <div class="li-tit">{{$t('Administrati.profit')}}</div>
         <div class="cont">
-          Always deliver your profit on time and secure. <br />
-          Can exit the platform with an ease of use interface
+          {{$t('Administrati.always')}} <br />
+          {{$t('Administrati.canexit')}}
         </div>
       </div>
       <img src="@/assets/administrati/works2.png" alt="" class="right-img" />
@@ -306,7 +301,6 @@ export default {
     }
   }
   .trade {
-    border: 1px solid red;
     height: 25rem;
     background-position: left;
     margin-bottom: 20rem;
@@ -315,8 +309,8 @@ export default {
       padding-right: 1%;
       margin-top: 22rem;
       color: #333;
-      right:auto;
-      left:50%;
+      right: auto;
+      left: 50%;
       transform: translateX(-50%);
       .tit {
         margin-bottom: 0.1rem;

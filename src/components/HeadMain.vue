@@ -8,7 +8,7 @@
         :class="{ sel: indexpath === path }"
         @click="goto(path)"
       >
-        {{ name }}
+        {{$t('head.'+name)}}
       </li>
     </ul>
     <b>More</b>
@@ -28,7 +28,11 @@
         class="close"
       />
       <li v-for="({ path, name }, i) in menuList" :key="i" @click="goto(path)">
-        {{ name }}
+        {{$t('head.'+name)}}
+      </li>
+      <div style="margin-top: 2rem"></div>
+      <li v-for="(item, i) in langList" :key="i" @click="setLocale(item.value)">
+        {{ item.name }}
       </li>
     </ul>
   </div>
@@ -37,36 +41,62 @@
 <script>
 import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import { useI18n } from "vue3-i18n";
 export default {
   name: "Head",
+  data() {
+    return {
+      menuList: [
+        {
+          name: "Administrati",
+          path: "/",
+        },
+        {
+          name: "Agreement",
+          path: "/agreement",
+        },
+        {
+          name: "About",
+          path: "/about",
+        },
+        {
+          name: "Home",
+          path: "/home",
+        },
+      ],
+      langList: [
+        {
+          name: "English",
+          value: "en",
+        },
+        {
+          name: "中文",
+          value: "zh",
+        },
+      ],
+    };
+  },
   setup() {
     const route = useRoute();
     const router = useRouter();
     const indexpath = computed(() => route.path);
     const isShowMenu = ref(false);
-    const menuList = [
-      {
-        name: "Administrati",
-        path: "/",
-      },
-      {
-        name: "Agreement",
-        path: "/agreement",
-      },
-      {
-        name: "About us",
-        path: "/about",
-      },
-      {
-        name: "Home",
-        path: "/home",
-      },
-    ];
     function goto(path) {
       router.push(path);
       isShowMenu.value = false;
     }
-    return { indexpath, isShowMenu, goto, menuList };
+
+    const i18n = useI18n();
+    const setLocale = (lang) => {
+      i18n.setLocale(lang);
+      // isShowMenu.value = false;
+    };
+
+    // setInterval(() => {
+    //   setLocale('zh')
+    // }, 1000);
+
+    return { indexpath, isShowMenu, goto, setLocale };
   },
 };
 </script>
@@ -157,7 +187,7 @@ export default {
       color: #fff;
       width: 12rem;
       font-size: 1.2rem;
-      padding: 1.5rem 0 .8rem;
+      padding: 1.5rem 0 0.8rem;
       border-bottom: 1px solid #ccc;
     }
   }

@@ -2,71 +2,67 @@
   <div class="home-banner">
     <img src="@/assets/home_back.png" alt="" />
     <div class="wz">
-      <h2>Discover our Senkuage Arbitrage BOTS</h2>
-      <h4>Senkuage Programmer Team</h4>
+      <h2>{{ $t("about.our") }}</h2>
+      <h4>{{ $t("about.team") }}</h4>
       <h6>
-        Senkuage markets opportunities <br />
-        This is how much Senkuage Arbitrage BOTS <br />
-        can earn online and in which markets you can invest.
+        {{ $t("about.markets") }} <br />
+        {{ $t("about.much") }} <br />
+        {{ $t("about.online") }}
       </h6>
     </div>
   </div>
   <div class="simple">
-    <div class="title">Simple arbitrageurs</div>
-    <div class="coinbase">coinbase->binance</div>
+    <div class="title">{{ $t("about.arbitrageurs") }}</div>
+    <div class="coinbase">{{ $t("about.binance") }}</div>
     <img class="down" src="@/assets/about/down.png" alt="" />
     <div class="sim-content">
       <li>
         <img src="@/assets/about/cont-icon0.png" alt="" />
         <div class="txt">
-          Buy coin on one exchange and <br />
-          sell it on another <br />
-          exchange at same time <br />
-          Senkuage Arbitrage BOTS <br />
-          canearn the "spread" Instantly
+          {{ $t("about.exchange") }} <br />
+          {{ $t("about.another") }} <br />
+          {{ $t("about.time") }} <br />
+          {{ $t("about.arbitrage") }}  <br />
+          {{ $t("about.canearn") }}
         </div>
       </li>
       <li>
         <img src="@/assets/about/cont-icon1.png" alt="" />
         <div class="txt">
-          · Can transfer between exchanges but taht takes time <br />
-          · Can already havefiat & crypto balances on different exchange
+          {{ $t("about.exchanges") }} <br />
+          {{ $t("about.different") }}
         </div>
       </li>
       <li>
         <img src="@/assets/about/cont-icon2.png" alt="" />
         <div class="txt">
-          E.g. LTC is $60 on Binance and $62 on Coinbase Buy 50 on Binance and
-          sell 50 on Coinbase -> $100 profit
+          {{ $t("about.profit") }}
         </div>
       </li>
     </div>
   </div>
   <div class="simple">
-    <div class="title">Fiat traiangular arbitrage</div>
-    <div class="coinbase">coinbase->bithumb->bank</div>
+    <div class="title">{{ $t("about.traiangular") }}</div>
+    <div class="coinbase">{{ $t("about.bank") }}</div>
     <img class="down" src="@/assets/about/down.png" alt="" />
     <div class="sim-content fiat">
       <div class="left-block">
         <div class="li">
           <img src="@/assets/about/sim-icon0.png" alt="" />
           <span>
-            When 3 assets (or 2 asset pairs) are involved E.g. BTC/USD
-            andBTC/KRW
+            {{ $t("about.assets") }}
           </span>
         </div>
         <div class="li">
           <img src="@/assets/about/sim-icon1.png" alt="" />
           <span>
-            Example:Buy 1 BTC for $3800 on Coinbase,send to Korean exchange and
-            sell it for $4200 worth of KWR
+            {{ $t("about.sell") }}
           </span>
         </div>
         <div class="li">
           <img src="@/assets/about/sim-icon2.png" alt="" />
           <span>
-            Then convert the KWR to USD FOR $400 profit Often is opportunity
-            between exchanges serving local markets
+            {{ $t("about.between") }}
           </span>
         </div>
       </div>
@@ -74,74 +70,68 @@
     </div>
   </div>
   <div class="crypto">
-    <div class="titlt">Crypto Triangular arbitrage</div>
+    <div class="titlt">{{ $t("about.triangular") }}</div>
     <div class="subhead">
-      Can also do this for crypto, even within 1 exchange!
+      {{ $t("about.within") }}
     </div>
     <img class="down-w" src="@/assets/about/down-w.png" alt="" />
   </div>
   <div class="crypot-content">
     <div class="cry-card">
-      <div class="cay-tit">Mispricing between 3 pairs of coins</div>
+      <div class="cay-tit">{{ $t("about.coins") }}</div>
       <i></i>
-      <div class="cay-con">E.g. ETH/BTC, ETH/LTC,and LTC/BTC</div>
+      <div class="cay-con">{{ $t("about.eg") }}</div>
     </div>
     <div class="cry-card">
-      <div class="cay-tit">There are different ratios between coins</div>
+      <div class="cay-tit">{{ $t("about.ratios") }}</div>
       <i></i>
       <div class="cay-con">
-        This is when Senkuage Arbitrage BOTS can do Triangular arbitrage
+        {{ $t("about.when") }}
       </div>
     </div>
   </div>
   <div class="simple">
-    <div class="title">Convergence arbitrage</div>
+    <div class="title">{{ $t("about.convergence") }}</div>
     <div class="coinbase">
-      Base on idea that prices will eventually converge
+      {{ $t("about.converge") }}
     </div>
     <img class="down" src="@/assets/about/down.png" alt="" />
     <div class="sim-content conver">
       <img src="@/assets/about/conver-img.png" alt="" class="conver-left" />
       <div class="conver-right">
         <div class="con-li">
-          ·Buy on exhange where coin is underval ued and then Senkuage Arbitrage
-          BOTS short-sell on exchange where is overvaued
+          {{ $t("about.overvaued") }}
         </div>
         <div class="con-li">
-          ·Need exchange that allow shorting E.g. buy LTC on Gemini for $51,
-          short on Kraken where it is $56
+          {{ $t("about.short") }}
         </div>
         <div class="con-li">
-          ·When price converge Senkuage Arbitrage BOTS'll make $5 profit
+          {{ $t("about.price") }}
         </div>
       </div>
     </div>
   </div>
   <div class="simple">
-    <div class="title">Cash-and-Carry arbitrage</div>
-    <div class="coinbase">do this in futures markets</div>
+    <div class="title">{{ $t("about.carry") }}</div>
+    <div class="coinbase">{{ $t("about.futures") }}</div>
     <img class="down" src="@/assets/about/down.png" alt="" />
     <div class="sim-content cash">
       <div class="cash-li">
         <img src="@/assets/about/cash0.png" alt="" />
         <span>
-          Basically go long in spot market and short in futures markets "Carry"
-          asset until futures contract expires
+          {{ $t("about.long") }}
         </span>
       </div>
       <div class="cash-li">
         <img src="@/assets/about/cash1.png" alt="" />
         <span>
-          Then settle it with Senkuage Arbitrage BOTSr long position Pocket the
-          difference when you deliver it.E.g. futures price on CME for BTC is
-          $4300,
+          {{ $t("about.settle") }}
         </span>
       </div>
       <div class="cash-li">
         <img src="@/assets/about/cash2.png" alt="" />
         <span>
-          right now on Binance it is $4000 No real "carrying costs" with digital
-          assets
+          {{ $t("about.right") }}
         </span>
       </div>
     </div>
