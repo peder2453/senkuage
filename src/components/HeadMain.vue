@@ -8,11 +8,28 @@
         :class="{ sel: indexpath === path }"
         @click="goto(path)"
       >
-        {{$t('head.'+name)}}
+        {{ $t("head." + name) }}
       </li>
     </ul>
+    <el-dropdown trigger="click" @command="handleCommand">
+      <span class="el-dropdown-link">
+        <img :src="require(`@/assets/${selLang}.svg`)" /><i
+          class="el-icon-arrow-down el-icon--right"
+        ></i>
+      </span>
+      <template #dropdown>
+        <el-dropdown-menu>
+          <el-dropdown-item
+            v-for="(item, i) in langList"
+            :key="i"
+            :command="item"
+          >
+            <img :src="require(`@/assets/${item.name}.svg`)" />
+          </el-dropdown-item>
+        </el-dropdown-menu>
+      </template>
+    </el-dropdown>
     <b>More</b>
-
     <img
       src="@/assets/footer_menu.png"
       @click="isShowMenu = true"
@@ -28,7 +45,7 @@
         class="close"
       />
       <li v-for="({ path, name }, i) in menuList" :key="i" @click="goto(path)">
-        {{$t('head.'+name)}}
+        {{ $t("head." + name) }}
       </li>
       <div style="margin-top: 2rem"></div>
       <li v-for="(item, i) in langList" :key="i" @click="setLocale(item.value)">
@@ -70,8 +87,12 @@ export default {
           value: "en",
         },
         {
-          name: "中文",
-          value: "zh",
+          name: "Japanese",
+          value: "ja",
+        },
+        {
+          name: "Korean",
+          value: "ko",
         },
       ],
     };
@@ -92,11 +113,17 @@ export default {
       isShowMenu.value = false;
     };
 
+    const selLang = ref("English");
+    function handleCommand({ value, name }) {
+      setLocale(value);
+      selLang.value = name;
+    }
+
     // setInterval(() => {
     //   setLocale('zh')
     // }, 1000);
 
-    return { indexpath, isShowMenu, goto, setLocale };
+    return { indexpath, isShowMenu, goto, setLocale, handleCommand, selLang };
   },
 };
 </script>
@@ -208,6 +235,32 @@ export default {
     }
     .menu {
       display: inline;
+    }
+  }
+}
+</style>
+<style lang="scss">
+.el-dropdown-link {
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  img {
+    width: 20px;
+  }
+}
+
+.el-dropdown__popper {
+  .el-dropdown-menu {
+    background: #999 !important;
+    .el-dropdown-menu__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      img {
+        width: 30px;
+      }
     }
   }
 }

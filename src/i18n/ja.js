@@ -3,7 +3,7 @@ export default {
         Administrati: 'Administrati',
         Agreement: 'Agreement',
         About: 'About us',
-        Home: '首页',
+        Home: 'ホーム',
     },
     footer: {
         areYou: 'Are you ready?',
@@ -44,7 +44,7 @@ export default {
         canexit: 'Can exit the platform with an ease of use interface',
     },
     agreement: {
-        senkuage: '中文标题测试',
+        senkuage: 'タイトルテスト',
         whatIs: 'What is Senkuage Protocol and what makes it unique?',
         market: 'MARKET EFFICIENT',
         whenThere: 'When there is a demand for coverage, Senkuage protocol incentivizes market makers to fill the need of the demand. At the same time, it lets the market set the premium of the coverage.',
